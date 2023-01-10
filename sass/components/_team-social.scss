@@ -1,0 +1,41 @@
+/* ----------  Соцмережі команди ---------- */
+.social{
+    display: flex;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+
+  &__item{
+    border-radius: 50%;
+    border-color: $accent-color;
+  }
+  
+  &__link {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  
+    transition: fill $transition-time-hover-focus
+        cubic-bezier(0.4, 0, 0.2, 1),
+      background-color $transition-time-hover-focus
+        cubic-bezier(0.4, 0, 0.2, 1);
+  
+    fill: $link-bc;
+  }
+  &__link:hover,
+  &__link:focus {
+    fill: $white-color;
+    background-color: $accent-color;
+  }
+  }
+  
+
+  
+ 

@@ -1,0 +1,10 @@
+/*  ---------- Шапка сайту ---------- */
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &__container {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

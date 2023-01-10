@@ -1,0 +1,173 @@
+/* ---------- Форма ---------- */
+.form {
+    display: flex;
+    flex-direction: column;
+  
+    align-items: flex-start;
+    
+    &__title {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  }
+  
+  &__input {
+    width: 448px;
+    height: 40px;
+  
+    padding-left: 42px;
+  
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  
+    cursor: pointer;
+  }
+  
+  &__field:focus-within > &__input,
+  &__field:focus-within > &__svg,
+  &__comment:focus-within > &__textarea {
+    fill: $accent-color;
+    outline: none;
+  
+    border-color: $accent-color;
+  }
+  
+  &__field {
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    margin-bottom: 10px;
+  }
+  
+  &__svg {
+    position: absolute;
+  
+    top: 50%;
+    left: 15px;
+  
+    width: 18px;
+    height: 18px;
+  }
+  &__comment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    margin-bottom: 20px;
+  }
+  &__textarea {
+    resize: none;
+    width: 448px;
+    height: 120px;
+  
+    padding: 12px 16px;
+  
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  }
+  
+  &__textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+ 
+  
+  &__btn {
+    padding: 10px 52px;
+    min-width: 200px;
+    min-height: 50px;
+  
+    margin-left: auto;
+    margin-right: auto;
+  
+    justify-content: center;
+    align-items: center;
+  
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+  
+    transition: background-color $transition-time-hover-focus
+      cubic-bezier(0.4, 0, 0.2, 1);
+  
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  
+    color: $white-color;
+    background-color: $accent-color;
+  }
+  
+  &__btn:hover,
+  &__btn:focus {
+    background-color: $btn-active;
+  }
+  }
+  
+  .checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    margin-left: auto;
+    margin-right: auto;
+  
+    margin-bottom: 30px;
+    
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  
+  &__link {
+    text-decoration: underline;
+    cursor: pointer;
+  
+    color: $accent-color;
+  }
+  
+  &__input {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+    cursor: pointer;
+  }
+  
+  &__svg {
+    width: 16px;
+    height: 15px;
+    margin-right: 8.38px;
+  
+    border: 2px solid #212121;
+    border-radius: 4px;
+  
+    fill: $white-color;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__input:checked + &__svg {
+    background-color: $accent-color;
+    border-color: $accent-color;
+  }
+}
+  
+  
+  

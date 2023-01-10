@@ -1,0 +1,30 @@
+/*  ---------- Лого ----------  */
+.logo-header {
+    margin-right: 93px;
+    padding: 25px 0;
+  
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: $black-color;
+  }
+  .logo__web {
+    color: $accent-color;
+  }
+  .logo__studio {
+    color: $white-color;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }

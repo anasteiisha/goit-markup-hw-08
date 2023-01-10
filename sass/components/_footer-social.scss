@@ -1,0 +1,60 @@
+/* -------------Футер соцмережі--------------- */
+.footer-social {
+    display: flex;
+    margin-left: 70px;
+    align-items: baseline;
+    flex-direction: column;
+    width: 206px;
+    height: 80px;
+
+
+  &__title {
+    margin: 0px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  
+    color: $white-color;
+  }
+  
+  &__list {
+    gap: 10px;
+    display: flex;
+  
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__item {
+    display: flex;
+    border-radius: 50%;
+    border-color: $accent-color;
+    flex-basis: calc((100% - 3 * $social-item-gap) / 4);
+  }
+  
+  &__link {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  
+    transition: background-color $transition-time-hover-focus
+      cubic-bezier(0.4, 0, 0.2, 1);
+  
+    fill: $white-color;
+    background-color: $socials-footer-bg;
+  }
+  &__link:hover,
+  &__link:focus {
+    background-color: $accent-color;
+  }
+  }
+  

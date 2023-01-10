@@ -1,0 +1,32 @@
+/*  ---------- Адреса ---------- */
+.address__list {
+    display: flex;
+    flex-direction: column;
+  }
+  .address__item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  
+  .address__link-map {
+    color: $white-color;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  
+  .address__link-contacts {
+    color: $address-color;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+  
+    transition: color $transition-time-hover-focus
+      cubic-bezier(0.4, 0, 0.2, 1);
+  
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }  
+    }
+  
+  
