@@ -1,9 +1,12 @@
 /* ---------- hero ---------- */
 .hero {
-    padding: 200px;
-    max-width: 1600px;
+    
+    max-width: 480px;
     margin-right: auto;
     margin-left: auto;
+    padding: 118px 0;
+
+
   
     background-color: $hero-bg;
   
@@ -14,24 +17,32 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/hero-bg.jpeg);
+      url(/images/hero-mobile.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+   
 
     &__title {
         margin-bottom: 30px;
         margin: auto;
       
-        max-width: 696px;
+        max-width: 360px;
         font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
+        font-size: 26px;
+        line-height: 1.62;
         text-align: center;
         letter-spacing: 0.06em;
         text-transform: uppercase;
       
         color: $white-color;
+
+        @media screen and(min-width: $bp-desktop) {
+          font-size: 44px;
+       line-height: 1.36;
+       max-width: 696px;
+       }
       }
 
     &__btn {
@@ -62,4 +73,57 @@
         background-color: $btn-active;
       }
   }
- 
+  
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url('/images/hero-mobile@2x.jpeg');
+  }
+}
+@media screen and(min-width: $bp-mobile) {
+
+  .hero{
+  background-image: linear-gradient(to top,
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)
+) ,url(/images/hero-tablet.jpeg);}
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url('/images/hero-tablet@2x.jpeg');
+  }
+    
+  }
+}
+
+@media screen and(min-width: $bp-tablet) {
+
+.hero{
+
+  max-width: 768px;
+  background-image: linear-gradient(to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(/images/hero-desktop.jpeg);}
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url('/images/hero-desktop@2x.jpeg');
+  }
+    
+  }
+  
+}
+@media screen and (min-width: $bp-desktop) {
+  .hero{
+  max-width: 1600px;
+  padding: 200px;
+  }
+}
+  

@@ -1,11 +1,9 @@
 /* -------------Футер соцмережі--------------- */
 .footer-social {
-    display: flex;
-    margin-left: 70px;
-    align-items: baseline;
-    flex-direction: column;
-    width: 206px;
+    
     height: 80px;
+    margin-bottom: 60px;
+    
 
 
   &__title {
@@ -22,10 +20,6 @@
   &__list {
     gap: 10px;
     display: flex;
-  
-    margin: 0px;
-    padding: 0px;
-    align-items: center;
     justify-content: center;
   }
   
@@ -33,7 +27,6 @@
     display: flex;
     border-radius: 50%;
     border-color: $accent-color;
-    flex-basis: calc((100% - 3 * $social-item-gap) / 4);
   }
   
   &__link {
@@ -58,3 +51,8 @@
   }
   }
   
+  @media screen and (min-width: $bp-desktop) {
+    .footer-social{
+      margin-bottom: 0;
+    }
+  }

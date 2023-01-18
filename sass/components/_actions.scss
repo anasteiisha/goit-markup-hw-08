@@ -1,5 +1,8 @@
 /*  ---------- Чим ми займаємося ---------- */
 .actions {
+  @media screen and(max-width:$bp-desktop-1px) {
+    display: none;
+  }
     padding-bottom: 94px;
   &__list {
     display: flex;
@@ -35,12 +38,4 @@
     background-color: rgba(47, 48, 58, 0.8);
   }
 }
-    .section-title {
-    margin-bottom: 50px;
-  
-    color: $title-text-color;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-  }
+    

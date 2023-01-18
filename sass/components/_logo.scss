@@ -1,13 +1,26 @@
 /*  ---------- Лого ----------  */
 .logo-header {
-    margin-right: 93px;
-    padding: 25px 0;
+   
+    padding: 16px 0;
+    margin-right: 88px;
+    display: flex;
+    justify-content: flex-start;
   
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+   
     color: $black-color;
+
+    font-size: 24px;
+    line-height: 1.17;
+
+    @media screen and (min-width: $bp-tablet) and (max-width: $bp-desktop-1px) {
+      padding: 27px 0;
+   }
+    @media screen and (min-width: $bp-desktop) {
+       font-size: 26px;
+    line-height: 1.19;
+    }
   }
   .logo__web {
     color: $accent-color;

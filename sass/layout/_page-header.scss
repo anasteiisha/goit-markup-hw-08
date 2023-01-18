@@ -1,10 +1,16 @@
 /*  ---------- Шапка сайту ---------- */
 .header {
   border-bottom: 1px solid #ececec;
+  position: relative;
 
   &__container {
-    display: flex;
+    
     margin-top: 0;
     margin-bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
   }
 }

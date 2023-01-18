@@ -1,14 +1,30 @@
 /*  ---------- Футер  ---------- */
 .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 0;
+    
+    text-align: center;
+
+    
   
     background-color: $hero-and-footer-bg;
 
     &__container {
-        display: flex;
+        
         align-items: baseline;
+
+  
+        @media screen and(min-width:$bp-desktop) {
+          display: flex;
+        
+        }
+          @media screen and(min-width:$bp-tablet) {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+        }
+        
       }
+
       
       
     &__logo {
@@ -24,4 +40,14 @@
         display: flex;
         flex-direction: column;
       }
+}
+@media screen and(min-width: $bp-desktop) {
+  .footer{
+  text-align: start;
+
+  &__address{
+    margin-right: 94px;
+  }
+  }
+
 }

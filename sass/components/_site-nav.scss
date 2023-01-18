@@ -1,16 +1,21 @@
 /*  ---------- Сайт навігація ----------  */
 .site-nav {
-    display: flex;
+  display: flex;
     align-items: center;
+  
 
     &__list {
-        display: flex;
-      }
+        display: none;
 
+        @media screen and (min-width: $bp-tablet) {
+          display: flex;
+        }
+      }
 
     &__item:not(:last-child) {
     margin-right: 50px;
   }
+  
   
   &__link {
     position: relative;
@@ -49,7 +54,3 @@
     color: $accent-color;
   }
   }
-  
-  
-  
-  
