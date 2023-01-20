@@ -141,6 +141,11 @@ a {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
 .mobile-menu.is-open {
   display: block;
   -webkit-transform: translateX(0);
@@ -195,7 +200,6 @@ a {
   font-weight: 500;
   font-size: 34px;
   line-height: 40px;
-  /* identical to box height */
   letter-spacing: 0.02em;
   color: #2196F3;
 }
@@ -205,7 +209,7 @@ a {
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 1.18;
   letter-spacing: 0.02em;
   color: #757575;
 }
@@ -226,6 +230,14 @@ a {
   letter-spacing: 0.02em;
   color: #2196F3;
 }
+@media screen and (max-width: 479px) {
+  .menu-social {
+    gap: 10px;
+  }
+  .menu-social .menu-social__item:not(:first-child) {
+    padding-left: 0;
+  }
+}
 
 .menu-social__item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
@@ -237,15 +249,9 @@ a {
 }
 
 .mobile-menu__container {
-  padding: 48px 84px 48px 40px;
+  padding: 48px 48px 48px 40px;
 }
 
-@media screen and (max-width: 490px) {
-  .menu-social {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
 /*  ---------- Шапка сайту ---------- */
 .header {
   border-bottom: 1px solid #ececec;
@@ -733,6 +739,13 @@ a {
   font-size: 12px;
   line-height: 1.71;
 }
+@media screen and (max-width: 479px) {
+  .checkbox__text {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-size: 10px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .checkbox__text {
     font-size: 14px;
@@ -775,6 +788,11 @@ a {
 /*  ---------- Наші переваги ----------  */
 .features {
   padding: 60px 0;
+}
+@media screen and (max-width: 767px) {
+  .features__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .features {
@@ -960,9 +978,11 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .team__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .team__item {
     -ms-flex-preferred-size: calc((100% - 90px) / 4);
         flex-basis: calc((100% - 90px) / 4);
-    margin-right: 30px;
   }
   .team__list {
     display: -webkit-box;
@@ -1114,7 +1134,7 @@ a {
   top: 100%;
   opacity: 0;
 }
-.card__link:hover .card__overlay-text {
+.card__link:hover .card__overlay-text, .card__link:focus .card__overlay-text {
   opacity: 1;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
@@ -1273,7 +1293,7 @@ a {
     display: flex;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1300,14 +1320,17 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
   .footer {
     text-align: start;
   }
+}
+@media screen and (min-width: 768px) {
   .footer__address {
-    margin-right: 94px;
+    margin-bottom: 60px;
   }
 }
 /*  ---------- Адреса ---------- */
@@ -1316,12 +1339,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 60px;
-}
-@media screen and (min-width: 1200px) {
-  .address__list {
-    margin-bottom: 0;
-  }
 }
 
 .address__item:not(:last-child) {
@@ -1349,8 +1366,12 @@ a {
 
 /* -------------Футер соцмережі--------------- */
 .footer-social {
-  height: 80px;
   margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-social {
+    margin-bottom: 0;
+  }
 }
 .footer-social__title {
   margin: 0px;
@@ -1403,7 +1424,20 @@ a {
 
 @media screen and (min-width: 1200px) {
   .footer-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-bottom: 0;
+    margin-left: 70px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    width: 206px;
+    height: 80px;
   }
 }
 /* ------------- Футер підписка --------------- */
@@ -1417,15 +1451,25 @@ a {
           flex-direction: column;
   min-height: 86px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .subscription {
     width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
   .subscription {
-    width: 570px;
-    margin-left: auto;
+    min-width: 570px;
+    margin-left: 93px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .subscription__btn {
+    margin-left: 12px;
   }
 }
 .subscription__btn {

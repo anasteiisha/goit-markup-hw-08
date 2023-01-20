@@ -1,9 +1,12 @@
 /* -------------Футер соцмережі--------------- */
 .footer-social {
     
-    height: 80px;
     margin-bottom: 60px;
     
+    @media screen and(min-width: $bp-tablet) {
+
+      margin-bottom: 0;
+    }
 
 
   &__title {
@@ -53,6 +56,14 @@
   
   @media screen and (min-width: $bp-desktop) {
     .footer-social{
+      display: flex;
+      flex-direction: column;
       margin-bottom: 0;
+      margin-left: 70px;
+   
+      align-items: baseline;
+    
+      width: 206px;
+      height: 80px;
     }
   }

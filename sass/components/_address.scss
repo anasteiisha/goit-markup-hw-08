@@ -1,10 +1,7 @@
 /*  ---------- Адреса ---------- */
 .address__list {
     flex-direction: column;
-    margin-bottom: 60px;
-    @media screen and (min-width: $bp-desktop) {
-      margin-bottom: 0;
-     }
+  
   }
   .address__item:not(:last-child) {
     margin-bottom: 12px;

@@ -4,20 +4,17 @@
     
     text-align: center;
 
-    
-  
     background-color: $hero-and-footer-bg;
 
     &__container {
         
         align-items: baseline;
 
-  
         @media screen and(min-width:$bp-desktop) {
           display: flex;
         
         }
-          @media screen and(min-width:$bp-tablet) {
+          @media screen and(min-width:$bp-tablet) and(max-width:$bp-desktop-1px){
           display: flex;
           flex-wrap: wrap;
           justify-content: space-around;
@@ -39,15 +36,18 @@
     &__address {
         display: flex;
         flex-direction: column;
+
+        margin-bottom: 60px;
       }
 }
 @media screen and(min-width: $bp-desktop) {
   .footer{
   text-align: start;
-
-  &__address{
-    margin-right: 94px;
-  }
   }
 
 }
+ @media screen and(min-width: $bp-tablet) {
+    .footer__address{
+    margin-bottom: 60px;
+    }
+  }

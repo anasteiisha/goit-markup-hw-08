@@ -50,7 +50,8 @@
       
         opacity: 0;
       }
-      &__link:hover &__overlay-text {
+      &__link:hover &__overlay-text,
+      &__link:focus &__overlay-text {
         opacity: 1;
         transform: translateY(0%);
       }

@@ -3,6 +3,14 @@
     
   padding: 60px 0;
 
+  @media screen and(max-width: $bp-tablet-1px)
+  { 
+    
+    &__item:not(:last-child) {
+    margin-bottom: 30px;
+    }
+  }
+
   @media screen and(min-width:$bp-desktop) {
    padding: 94px 0px;
    
@@ -18,11 +26,11 @@
   }
   
   &__item {
-    
     margin-left: 0;
-    
-    
   }
+
+
+
   @media screen and (min-width: $bp-tablet) and (max-width: $bp-desktop-1px){
     &__list {
       display: flex;
