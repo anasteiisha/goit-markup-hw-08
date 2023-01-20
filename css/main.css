@@ -958,6 +958,11 @@ a {
   border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team__list {
+    gap: 30px;
+  }
+}
 @media screen and (min-width: 768px) {
   .team__list {
     display: -webkit-box;
