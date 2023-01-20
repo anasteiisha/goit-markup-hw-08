@@ -3,7 +3,7 @@
 .clients {
     padding: 60px 0;
 
-    @media screen and(min-width:$bp-desktopx) {
+    @media screen and(min-width:$bp-desktop) {
       padding: 94px 0;
       
       &__list {
@@ -32,7 +32,7 @@
           flex-basis: calc((100% - 60px) / 3);
           }
 
-        @media screen and(min-width:$bp-desktopx) {
+        @media screen and(min-width:$bp-desktop) {
           flex-basis: calc((100% - 150px) / 6);
           }
       }
